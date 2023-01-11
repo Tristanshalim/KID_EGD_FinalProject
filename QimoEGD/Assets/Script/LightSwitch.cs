@@ -7,6 +7,9 @@ namespace tristan
 
     public class LightSwitch : MonoBehaviour
     {
+        /// <summary>
+        /// turn on the light
+        /// </summary>
         public GameObject inttext;
         public new GameObject light;
         public bool toggle = true, interactable;

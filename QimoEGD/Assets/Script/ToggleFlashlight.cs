@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace tristan
 {
+    /// <summary>
+    /// Turn off/on flashlight
+    /// </summary>
     public class ToggleFlashlight : MonoBehaviour
     {
 

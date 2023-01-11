@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace tristan
 {
+    /// <summary>
+    /// Scary event trigger when collide
+    /// </summary>
     public class ScaryEventTrigger : MonoBehaviour
     {
         public GameObject scare;

@@ -6,6 +6,9 @@ namespace tristan
 {
     public class PickFlashlight : MonoBehaviour
     {
+        /// <summary>
+        /// pickup the flashlight
+        /// </summary>
         public GameObject inttext, flashlight_table, flashlight_hand;
         public AudioSource pickup;
         public bool interactable;
