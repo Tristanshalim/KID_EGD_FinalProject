@@ -76,6 +76,9 @@
     <Compile Include="Assets\Script\SoundSystem.cs" />
     <Compile Include="Assets\Script\ToggleFlashlight.cs" />
     <Compile Include="Assets\Script\ScaryEventTrigger.cs" />
+    <Compile Include="Assets\Script\MainMenu.cs" />
+    <Compile Include="Assets\Script\Win.cs" />
+    <Compile Include="Assets\Script\ReloadScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

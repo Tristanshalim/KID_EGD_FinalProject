@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2170a920897b63643b2c826552a426f6
+  - enabled: 1
+    path: Assets/Scenes/Qimo.unity
+    guid: 8eeaa8bf435c87a49950f088ea4d3359
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: ceba4b070b8d31043ab515ebe81cbef9
   m_configObjects: {}
