@@ -2,38 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToggleFlashlight : MonoBehaviour
+namespace tristan
 {
-
-    public GameObject light;
-    public bool toggle;
-    public AudioSource toggleSound;
-
-    void Start()
+    public class ToggleFlashlight : MonoBehaviour
     {
-        if (toggle == false)
-        {
-            light.SetActive(false);
-        }
-        if (toggle == true)
-        {
-            light.SetActive(true);
-        }
-    }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
+        public GameObject flashlight;
+        public bool toggle;
+        public AudioSource toggleSound;
+
+        void Start()
         {
-            toggle = !toggle;
-            toggleSound.Play();
             if (toggle == false)
             {
-                light.SetActive(false);
+                flashlight.SetActive(false);
             }
             if (toggle == true)
             {
-                light.SetActive(true);
+                flashlight.SetActive(true);
+            }
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                toggle = !toggle;
+                toggleSound.Play();
+                if (toggle == false)
+                {
+                    flashlight.SetActive(false);
+                }
+                if (toggle == true)
+                {
+                    flashlight.SetActive(true);
+                }
             }
         }
     }

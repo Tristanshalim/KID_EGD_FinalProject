@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaryEventTrigger : MonoBehaviour
+namespace tristan
 {
-    public GameObject scare;
-    public AudioSource scareSound;
-    public Collider collision;
-
-    void OnTriggerEnter(Collider other)
+    public class ScaryEventTrigger : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        public GameObject scare;
+        public AudioSource scareSound;
+        public Collider collision;
+
+        void OnTriggerEnter(Collider other)
         {
-            scare.SetActive(true);
-            scareSound.Play();
-            collision.enabled = false;
+            if (other.CompareTag("Player"))
+            {
+                scare.SetActive(true);
+                scareSound.Play();
+                collision.enabled = false;
+            }
         }
     }
 }

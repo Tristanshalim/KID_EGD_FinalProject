@@ -2,53 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitch : MonoBehaviour
+namespace tristan
 {
-    public GameObject inttext;
-    public new GameObject light;
-    public bool toggle = true, interactable;
-    public Renderer lightBulb;
-    public Material offlight, onlight;
-    public AudioSource lightSwitchSound;
-    public Animator switchAnim;
 
-    void OnTriggerStay(Collider other)
+    public class LightSwitch : MonoBehaviour
     {
-        if (other.CompareTag("MainCamera"))
+        public GameObject inttext;
+        public new GameObject light;
+        public bool toggle = true, interactable;
+        public Renderer lightBulb;
+        public Material offlight, onlight;
+        public AudioSource lightSwitchSound;
+        public Animator switchAnim;
+
+        void OnTriggerStay(Collider other)
         {
-            inttext.SetActive(true);
-            interactable = true;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("MainCamera"))
-        {
-            inttext.SetActive(false);
-            interactable = false;
-        }
-    }
-    void Update()
-    {
-        if (interactable == true)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (other.CompareTag("MainCamera"))
             {
-                toggle = !toggle;
-                lightSwitchSound.Play();
-                switchAnim.ResetTrigger("press");
-                switchAnim.SetTrigger("press");
+                inttext.SetActive(true);
+                interactable = true;
             }
         }
-        if (toggle == false)
+        void OnTriggerExit(Collider other)
         {
-            light.SetActive(false);
-            lightBulb.material = offlight;
+            if (other.CompareTag("MainCamera"))
+            {
+                inttext.SetActive(false);
+                interactable = false;
+            }
         }
-        if (toggle == true)
+        void Update()
         {
-            light.SetActive(true);
-            lightBulb.material = onlight;
+            if (interactable == true)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    toggle = !toggle;
+                    lightSwitchSound.Play();
+                    switchAnim.ResetTrigger("press");
+                    switchAnim.SetTrigger("press");
+                }
+            }
+            if (toggle == false)
+            {
+                light.SetActive(false);
+                lightBulb.material = offlight;
+            }
+            if (toggle == true)
+            {
+                light.SetActive(true);
+                lightBulb.material = onlight;
+            }
         }
     }
 }
