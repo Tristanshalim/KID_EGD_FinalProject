@@ -74,6 +74,8 @@
     <Compile Include="Assets\Script\LearnCoroutine.cs" />
     <Compile Include="Assets\Script\LearnLoop.cs" />
     <Compile Include="Assets\Script\SoundSystem.cs" />
+    <Compile Include="Assets\Script\ToggleFlashlight.cs" />
+    <Compile Include="Assets\Script\ScaryEventTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
